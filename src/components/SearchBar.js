@@ -1,7 +1,10 @@
 function SearchBar({ onSubmit }) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        onSubmit("cars");
+        onSubmit(
+            // NEVER EVER EVER DO THIS
+            document.querySelector("input").value
+        );
     };
 
     return (
