@@ -1,3 +1,4 @@
+import "./SearchBar.css";
 import { useState } from "react";
 
 function SearchBar({ onSubmit }) {
@@ -19,8 +20,9 @@ function SearchBar({ onSubmit }) {
     };
 
     return (
-        <div>
+        <div className="search-bar">
             <form onSubmit={handleFormSubmit}>
+                <label>Enter Search Term</label>
                 {/* Step 5. Passing state to the input as the value prop to always display whatever in there in 'term' prop*/}
                 <input value={term} onChange={handleChange} />
             </form>
