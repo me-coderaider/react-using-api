@@ -1,16 +1,27 @@
+import { useState } from "react";
+
 function SearchBar({ onSubmit }) {
+    // Step 1.
+    const [term, setTerm] = useState("");
+
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        onSubmit(
-            // NEVER EVER EVER DO THIS
-            document.querySelector("input").value
-        );
+        onSubmit(term);
+    };
+
+    // Step 2.
+    const handleChange = (event) => {
+        // Step 3. getting value of input i.e by using 'event.target.value'
+
+        // Step 4.
+        setTerm(event.target.value);
     };
 
     return (
         <div>
             <form onSubmit={handleFormSubmit}>
-                <input />
+                {/* Step 5. Passing state to the input as the value prop to always display whatever in there in 'term' prop*/}
+                <input value={term} onChange={handleChange} />
             </form>
         </div>
     );
