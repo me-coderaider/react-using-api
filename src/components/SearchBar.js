@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function SearchBar({ onSubmit }) {
+    // 5 STEPS of handling input-elements in REACT
     // Step 1.
     const [term, setTerm] = useState("");
 

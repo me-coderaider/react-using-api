@@ -1,4 +1,4 @@
-function ImageShow() {
-    return <div>ImageShow Component</div>;
+function ImageShow({ image }) {
+    return <div>{image.id}</div>;
 }
 export default ImageShow;
